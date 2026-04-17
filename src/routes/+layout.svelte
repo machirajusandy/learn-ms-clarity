@@ -7,7 +7,7 @@
   // ─── Microsoft Clarity Injection ──────────────────────────────────────────
   // Injected inside onMount so it never runs during SSR rendering.
   // Replace YOUR_PROJECT_ID with your real Clarity project ID.
-  const CLARITY_PROJECT_ID = 'YOUR_PROJECT_ID';
+ const CLARITY_PROJECT_ID = import.meta.env.PUBLIC_CLARITY_PROJECT_ID ?? '';
 
   onMount(() => {
     (function (c: Window & typeof globalThis, l: Document, a: string, r: string, i: string) {
